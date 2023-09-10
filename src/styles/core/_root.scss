@@ -2,11 +2,19 @@ html {
   height: 100vh;
   margin: 0 auto;
   padding: 0;
+--text: #020123;
+  --background: #e2e1fe;
+  --primary: #6964fc;
+  --secondary: #c5c3fe;
+  --accent: #0c04f0;
 }
 
-body {
-  margin: 0 auto;
-  padding: 0;
+[data-theme="dark"] {
+  --text: #e2e1fe;
+  --background: #020123;
+  --primary: #6964fc;
+  --secondary: #020128;
+  --accent: #9390fd;
 }
 
 #root {
@@ -16,19 +24,20 @@ body {
   font-size: 1.25em;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 3em 0 1em;
+body {
+  margin: 0 auto;
+  padding: 0;
+  background-color: var(--background);
 }
 
-p,
-ul,
-ol {
-  margin-bottom: 2em;
-  color: #1d1d1d;
-  font-family: sans-serif;
+.button-primary {
+  background-color: var(--primary);
+}
+
+.button-secondary {
+  background-color: var(--secondary);
+}
+
+p {
+  color: var(--text)
 }
